@@ -1,15 +1,57 @@
+# Partie : 1 - installer docker
+
 ```sh
-su
-#ou sudo -s
-pwd
+sudo -s
 git clone https://github.com/hrhouma/install-docker.git
 cd install-docker/
 chmod +x install-docker.sh
 ./install-docker.sh
-#ou sh install-docker.sh
 docker version
 docker compose version
 ```
+
+# Partie : 2 - installer docker-compose
+
+
+
+
+
+
+
+
+python -m streamlit run frontend/streamlit_main.py
+uvicorn backend.main:app --host 0.0.0.0 --port 8000
+mlflow ui --backend-store-uri sqlite:///db/backend.db --host 0.0.0.0 --port 5000
+
+
+streamlit
+mlflow
+numpy
+pandas
+matplotlib
+torch
+torchvision
+fastapi[all]
+uvicorn
+streamlit-drawable-canvas
+tqdm
+scikit-learn
+opencv-python-headless
+streamlit
+numpy
+pandas
+matplotlib
+streamlit-drawable-canvas
+opencv-python-headless
+requests
+mlflow
+numpy
+pandas
+matplotlib
+torch
+torchvision
+fastapi[all]
+tqdm
 
 ### Solution 2: Use Python Virtual Environment for Docker Compose
 
