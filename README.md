@@ -56,8 +56,11 @@ docker-compose up -d
 docker-compose logs -t -f --tail 5
 ```
 
-# Référence : 
-https://github.com/zademn/mnist-mlops-learning/tree/master
+# Références : 
+- https://github.com/zademn/mnist-mlops-learning/tree/master
+- https://www.linkedin.com/pulse/mlops-task-3-integrating-machine-learning-devops-rupali-gurjar/
+- https://www.youtube.com/watch?v=1LbdHnOZch8&ab_channel=BhupendraKumar
+- https://github.com/bhupendrak9917/My-AI-Projects/tree/main/MNIST_Streamlit
 
 # Partie : 2 - TO DO
 
