@@ -1,4 +1,4 @@
-# Partie : 1 - configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS
+# Partie : 1 - Configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS
 
 Ce guide détaille les étapes pour configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS.
 
