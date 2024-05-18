@@ -54,12 +54,12 @@ docker-compose up -d
 
 # Pour surveiller les journaux des conteneurs Docker, utilisez :
 docker-compose logs -t -f --tail 5
+```
+
+
+
+
 ```bash
-
-
-
-
-
 python -m streamlit run frontend/streamlit_main.py
 uvicorn backend.main:app --host 0.0.0.0 --port 8000
 mlflow ui --backend-store-uri sqlite:///db/backend.db --host 0.0.0.0 --port 5000
