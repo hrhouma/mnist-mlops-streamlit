@@ -6,7 +6,7 @@ Ce guide détaille les étapes pour configurer un environnement Docker et déplo
 # Choisir une instance EC2 de type t2.2xlarge avec 8 CPU, 32 Go de RAM et 50 Go de volume de stockage.
 
 # Se connecter à votre instance EC2 :
-ssh ubuntu@ip-172-31-59-153
+ssh ubuntu@VOTRE-IP-publique
 
 # Passer en mode superutilisateur :
 sudo -s
@@ -54,7 +54,7 @@ docker-compose up -d
 
 # Pour surveiller les journaux des conteneurs Docker, utilisez :
 docker-compose logs -t -f --tail 5
-
+```bash
 
 
 
