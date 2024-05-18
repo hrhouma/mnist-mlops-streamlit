@@ -56,8 +56,10 @@ docker-compose up -d
 docker-compose logs -t -f --tail 5
 ```
 
+# Référence : 
+https://github.com/zademn/mnist-mlops-learning/tree/master
 
-
+# Partie : 2 - TO DO
 
 ```bash
 python -m streamlit run frontend/streamlit_main.py
