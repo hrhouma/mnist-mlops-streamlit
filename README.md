@@ -13,6 +13,62 @@ docker compose version
 # Partie : 2 - installer docker-compose
 
 
+# README
+
+Ce guide détaille les étapes pour configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS.
+
+```bash
+# Choisir une instance EC2 de type t2.2xlarge avec 8 CPU, 32 Go de RAM et 50 Go de volume de stockage.
+
+# Se connecter à votre instance EC2 :
+ssh ubuntu@ip-172-31-59-153
+
+# Passer en mode superutilisateur :
+sudo -s
+
+# Cloner le script d'installation de Docker :
+git clone https://github.com/hrhouma/install-docker.git
+
+# Naviguer vers le répertoire `install-docker` :
+cd install-docker/
+
+# Rendre le script d'installation exécutable :
+chmod +x install-docker.sh
+
+# Exécuter le script d'installation :
+./install-docker.sh
+
+# Mettre à jour la liste des paquets :
+sudo apt-get update -y
+
+# Revenir au répertoire de l'utilisateur :
+cd ..
+
+# Installer Docker Compose :
+apt install docker-compose -y
+
+# Vérifier la version de Docker Compose :
+docker-compose --version
+
+# Cloner le dépôt de l'application :
+git clone https://github.com/hrhouma/mnist-mlops-streamlit.git
+
+# Naviguer vers le répertoire `mnist-mlops-streamlit` :
+cd mnist-mlops-streamlit
+
+# Construire les images Docker :
+docker-compose build
+
+# Lancer les conteneurs Docker en mode détaché :
+docker-compose up -d
+
+# Essayez d'accéder à l'application en utilisant les URLs suivantes :
+# Interface utilisateur Streamlit : http://ec2-35-153-79-164.compute-1.amazonaws.com:8501/
+# API Backend : http://ec2-35-153-79-164.compute-1.amazonaws.com:5000/
+# Documentation de l'API : http://ec2-35-153-79-164.compute-1.amazonaws.com:8000/docs#/
+
+# Pour surveiller les journaux des conteneurs Docker, utilisez :
+docker-compose logs -t -f --tail 5
 
 
 
@@ -24,34 +80,6 @@ uvicorn backend.main:app --host 0.0.0.0 --port 8000
 mlflow ui --backend-store-uri sqlite:///db/backend.db --host 0.0.0.0 --port 5000
 
 
-streamlit
-mlflow
-numpy
-pandas
-matplotlib
-torch
-torchvision
-fastapi[all]
-uvicorn
-streamlit-drawable-canvas
-tqdm
-scikit-learn
-opencv-python-headless
-streamlit
-numpy
-pandas
-matplotlib
-streamlit-drawable-canvas
-opencv-python-headless
-requests
-mlflow
-numpy
-pandas
-matplotlib
-torch
-torchvision
-fastapi[all]
-tqdm
 
 ### Solution 2: Use Python Virtual Environment for Docker Compose
 
