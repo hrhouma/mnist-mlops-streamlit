@@ -1,19 +1,4 @@
-# Partie : 1 - installer docker
-
-```sh
-sudo -s
-git clone https://github.com/hrhouma/install-docker.git
-cd install-docker/
-chmod +x install-docker.sh
-./install-docker.sh
-docker version
-docker compose version
-```
-
-# Partie : 2 - installer docker-compose
-
-
-# README
+# Partie : 1 - configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS
 
 Ce guide détaille les étapes pour configurer un environnement Docker et déployer une application sur une instance EC2 d'AWS.
 
