@@ -75,7 +75,7 @@ async def read_root():
 @app.get("/models")
 async def get_models_api():
     """Gets a list with model names"""
-    model_list = mlflowclient.list_registered_models()
+    model_list = mlflowclient.search_registered_models()
     model_list = [model.name for model in model_list]
     return model_list
 
